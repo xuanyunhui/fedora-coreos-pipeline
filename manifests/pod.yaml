@@ -21,9 +21,7 @@ spec:
        mountPath: /var/run/secrets/kubernetes.io/duffy-key
        readOnly: true
      securityContext:
-       privileged: false
-       capabilities:
-         add: ["CAP_SYS_ADMIN"]
+       privileged: true
   nodeSelector:
     oci_kvm_hook: allowed
   volumes:
