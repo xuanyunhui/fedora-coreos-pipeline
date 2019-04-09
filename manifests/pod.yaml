@@ -22,6 +22,8 @@ spec:
        readOnly: true
      securityContext:
        privileged: false
+       capabilities:
+         add: ["CAP_SYS_ADMIN"]
   nodeSelector:
     oci_kvm_hook: allowed
   volumes:
