@@ -7,7 +7,7 @@ kind: Pod
 spec:
   containers:
    - name: jnlp
-     image: jenkins-slave-base-centos7:latest
+     image: openshift/jenkins-slave-base-centos7:latest
      args: ['$(JENKINS_SECRET)', '$(JENKINS_NAME)']
    - name: coreos-assembler
      image: coreos-assembler:master
