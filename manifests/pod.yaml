@@ -24,6 +24,7 @@ spec:
        privileged: true
   nodeSelector:
     oci_kvm_hook: allowed
+  serviceAccount: ci-builder
   volumes:
   - name: data
     persistentVolumeClaim:
