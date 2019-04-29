@@ -5,7 +5,7 @@ node {
     utils = load("utils.groovy")
 
     // just autodetect if we're in prod or not
-    devel = (env.JENKINS_URL != 'https://jenkins-fedora-coreos.apps.ci.centos.org/')
+    devel = (env.JENKINS_URL != 'https://jenkins-jenkins.app.2dfire-daily.com/')
 
     if (devel) {
         echo "Running in devel mode on ${env.JENKINS_URL}."
