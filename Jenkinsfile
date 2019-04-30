@@ -19,7 +19,7 @@ properties([
     pipelineTriggers(devel ? [] : [cron("H/30 * * * *")])
 ])
 
-podTemplate(cloud: 'openshift', label: 'coreos-assembler', yaml: pod, defaultContainer: 'jnlp') {
+podTemplate(cloud: 'openshift', label: 'coreos-assembler', idleMinutes: '15', yaml: pod, defaultContainer: 'jnlp') {
     node('coreos-assembler') { container('coreos-assembler') {
 
         stage('Init') {
